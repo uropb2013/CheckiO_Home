@@ -3,7 +3,7 @@ def checkio(array: list) -> int:
     if array:
         for i in range(0, len(array), 2):
             num += array[i]
-        num *= array[len(array) - 1]
+        num *= array[-1]
     return num
 
 
