@@ -1,14 +1,14 @@
 def between_markers(text: str, begin: str, end: str) -> str:
     # your code here
-    if text.find(begin) == -1:
-        if text.find(end) == -1:
-            return text
-        return text[:text.find(end)]
-    if text.find(end) == -1:
-        return text[text.find(begin)+len(begin):]
-    if text.find(end) < text.find(begin):
-        return ""
-    return text[text.find(begin)+len(begin): text.find(end)]
+    if begin in text:
+        start = text.find(begin) + len(begin)
+    else:
+        start = None
+    if end in text:
+        end = text.find(end)
+    else:
+        end = None
+    return text[start:end]
 
 
 if __name__ == '__main__':
