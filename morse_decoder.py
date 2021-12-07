@@ -39,8 +39,7 @@ MORSE = {
 
 
 def morse_decoder(code):
-    text = " ".join(["".join([(MORSE[x]) for x in i.split()]) for i in code.split("   ")])
-    return text[0].upper() + text[1:]
+    return " ".join(["".join([(MORSE[x]) for x in i.split()]) for i in code.split("   ")]).capitalize()
 
 
 if __name__ == "__main__":
